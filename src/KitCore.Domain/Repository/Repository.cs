@@ -1,6 +1,6 @@
 using KitCore.Domain.Dto;
 
-namespace KitCore.Domain.Repositories;
+namespace KitCore.Domain.Repository;
 
 public interface IRepository<T>
 {
@@ -32,4 +32,4 @@ public interface ICurrencySetRepository : IRepository<CurrencySetDto> { }
 public interface IModelSetRepository : IRepository<ModelSetDto> { }
 public interface IDataTypeSetRepository : IRepository<DataTypeSetDto> { }
 public interface IUnitSetRepository : IRepository<UnitSetDto> { }
-}
+
