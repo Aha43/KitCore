@@ -127,7 +127,7 @@ public class InMemorySystemPartTypeAttributeTypeRepository : InMemoryRepository<
 // Set Table Repositories
 public class InMemoryBrandSetRepository : InMemoryRepository<BrandSetDto>, IBrandSetRepository
 {
-    protected override string GetEntityId(BrandSetDto entity) => entity.Brand;
+    protected override string GetEntityId(BrandSetDto entity) => entity.Name;
 }
 
 public class InMemoryCurrencySetRepository : InMemoryRepository<CurrencySetDto>, ICurrencySetRepository
