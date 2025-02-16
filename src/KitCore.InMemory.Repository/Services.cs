@@ -26,6 +26,8 @@ public static class Services
         services.AddSingleton<IModelSetRepository, InMemoryModelSetRepository>();
         services.AddSingleton<IDataTypeSetRepository, InMemoryDataTypeSetRepository>();
         services.AddSingleton<IUnitSetRepository, InMemoryUnitSetRepository>();
+
+        services.AddSingleton<IUnitSetRepository, InMemoryUnitSetRepository>();
         return services;
     }
 }

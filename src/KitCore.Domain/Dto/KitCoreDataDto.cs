@@ -12,4 +12,5 @@ public class KitCoreDataDto
     public IEnumerable<UseCaseStepDto> UseCaseSteps { get; set; } = [];
     public IEnumerable<SystemAttributeDto> SystemAttributes { get; set; } = [];
     public IEnumerable<SystemPartAttributeDto> SystemPartAttributes { get; set; } = [];
+    public IEnumerable<UnitSetDto> Units { get; set; } = [];
 }

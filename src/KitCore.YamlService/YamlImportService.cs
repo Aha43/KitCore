@@ -9,10 +9,17 @@ public class YamlImportService : IYamlImportService
     private readonly Dictionary<Type, object> _repositories;
 
     public YamlImportService(
-        IBrandSetRepository brandSetRepo, IModelSetRepository modelSetRepo, ICurrencySetRepository currencySetRepo,
-        ISystemRepository systemRepo, ISystemPartRepository systemPartRepo, IPurchaseRepository purchaseRepo,
-        IUseCaseRepository useCaseRepo, IUseCaseStepRepository useCaseStepRepo,
-        ISystemAttributeRepository systemAttributeRepo, ISystemPartAttributeRepository systemPartAttributeRepo)
+        IBrandSetRepository brandSetRepo,
+        IModelSetRepository modelSetRepo,
+        ICurrencySetRepository currencySetRepo,
+        ISystemRepository systemRepo,
+        ISystemPartRepository systemPartRepo,
+        IPurchaseRepository purchaseRepo,
+        IUseCaseRepository useCaseRepo,
+        IUseCaseStepRepository useCaseStepRepo,
+        ISystemAttributeRepository systemAttributeRepo,
+        ISystemPartAttributeRepository systemPartAttributeRepo,
+        IUnitSetRepository unitSetRepo)
     {
         _repositories = new Dictionary<Type, object>
         {
@@ -25,7 +32,8 @@ public class YamlImportService : IYamlImportService
             { typeof(IUseCaseRepository), useCaseRepo },
             { typeof(IUseCaseStepRepository), useCaseStepRepo },
             { typeof(ISystemAttributeRepository), systemAttributeRepo },
-            { typeof(ISystemPartAttributeRepository), systemPartAttributeRepo }
+            { typeof(ISystemPartAttributeRepository), systemPartAttributeRepo },
+            { typeof(IUnitSetRepository), unitSetRepo }
         };
     }
 
