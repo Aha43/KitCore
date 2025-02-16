@@ -1,0 +1,13 @@
+# 0000_units.yaml
+units:
+  - mm   # Millimeters
+  - "cm"   # Centimeters
+  - "m"    # Meters
+  - "km"   # Kilometers
+  - "in"   # Inches
+  - "ft"   # Feet
+  - "yd"   # Yards
+  - "mi"   # Miles
+  - "arcsec"  # Arcseconds (astronomy)
+  - "arcmin"  # Arcminutes (astronomy)
+  - "deg"     # Degrees
