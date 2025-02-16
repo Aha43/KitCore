@@ -1,0 +1,21 @@
+{
+    "Brands" : [
+        {
+            "BrandName" : "Apple",
+            
+        },
+        {
+            "BrandName" : "Samsung",
+            "Products" : [
+                {
+                    "ProductName" : "Galaxy",
+                    "Price" : 599
+                },
+                {
+                    "ProductName" : "Galaxy Tab",
+                    "Price" : 399
+                }
+            ]
+        }
+    ]
+}

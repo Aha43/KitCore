@@ -1,0 +1,59 @@
+{
+    "Units": [
+        {
+            "Name": "Millimeter",
+            "Symbol": "mm",
+            "Factor": 0.001
+        },
+        {
+            "Name": "Centimeter",
+            "Symbol": "cm",
+            "Factor": 0.01
+        },
+        {
+            "Name": "Meter",
+            "Symbol": "m",
+            "Factor": 1
+        },
+        {
+            "Name": "Kilometer",
+            "Symbol": "km",
+            "Factor": 1000
+        },
+        {
+            "Name": "Inch",
+            "Symbol": "in",
+            "Factor": 0.0254
+        },
+        {
+            "Name": "Foot",
+            "Symbol": "ft",
+            "Factor": 0.3048
+        },
+        {
+            "Name": "Yard",
+            "Symbol": "yd",
+            "Factor": 0.9144
+        },
+        {
+            "Name": "Mile",
+            "Symbol": "mi",
+            "Factor": 1609.344
+        },
+     {
+            "Name": "Arcsecond",
+            "Symbol": "arcsec",
+            "Factor": 4.84813681109536e-6
+        },
+        {
+            "Name": "Arcminute",
+            "Symbol": "arcmin",
+            "Factor": 0.000290888208665122
+        },
+        {
+            "Name": "Degree",
+            "Symbol": "deg",
+            "Factor": 0.0174532925199433
+        }
+    ]
+  }  
