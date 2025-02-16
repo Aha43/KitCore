@@ -127,7 +127,8 @@ public class SystemPartTypeAttributeTypeDto
 // Set Tables
 public class BrandSetDto
 {
-    public string Brand { get; set; } = null!;  // Primary Key
+    public string Name { get; set; } = null!;  // Primary Key
+    public string? Uri { get; set; }
 }
 
 public class CurrencySetDto
@@ -147,5 +148,7 @@ public class DataTypeSetDto
 
 public class UnitSetDto
 {
-    public string Unit { get; set; } = null!;  // Primary Key
+    public string Name { get; set; } = null!;  // Primary Key
+    public string Symbol { get; set; } = null!;
+    public decimal Factor { get; set; }
 }

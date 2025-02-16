@@ -147,5 +147,5 @@ public class InMemoryDataTypeSetRepository : InMemoryRepository<DataTypeSetDto>,
 
 public class InMemoryUnitSetRepository : InMemoryRepository<UnitSetDto>, IUnitSetRepository
 {
-    protected override string GetEntityId(UnitSetDto entity) => entity.Unit;
+    protected override string GetEntityId(UnitSetDto entity) => entity.Name;
 }

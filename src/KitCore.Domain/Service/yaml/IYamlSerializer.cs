@@ -1,6 +1,5 @@
 namespace KitCore.Domain.Service.yaml;
 
-public interface IYamlSerializer
+public interface IYamlSerializer : IFileService
 {
-    Task ImportFromDirectoryAsync(string directoryPath);
 }
