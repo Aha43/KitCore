@@ -1,0 +1,14 @@
+{
+    "Models": [
+        {
+            "Name": "LS60MT"
+        }
+    ],
+    "Systems": [
+        {
+            "Id": "Scope2",
+            "Code": "SN: 123456",
+            "Brand": "Lunt"
+        }
+    ]
+}

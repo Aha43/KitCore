@@ -1,6 +1,6 @@
-namespace KitCore.Domain.Repository;
+namespace KitCore.Domain.Service;
 
-public interface IRepository<T> where T : class
+public interface IRepositoryService<T> where T : class
 {
     Task<IEnumerable<T>> GetAllAsync();
     Task<T?> GetByIdAsync(string id);
@@ -8,4 +8,3 @@ public interface IRepository<T> where T : class
     Task UpdateAsync(T entity);
     Task DeleteAsync(string id);
 }
-

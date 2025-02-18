@@ -10,6 +10,7 @@ public static class Services
     {
         services.AddSingleton<IRepository<SystemDto>, InMemorySystemRepository>();
         services.AddSingleton<IRepository<PartDto>, InMemoryPartRepository>();
+        services.AddSingleton<IRepository<SystemPartDto>, InMemorySystemPartRepository>();
         services.AddSingleton<IRepository<PurchaseDto>, InMemoryPurchaseRepository>();
         services.AddSingleton<IRepository<UseCaseDto>, InMemoryUseCaseRepository>();
         services.AddSingleton<IRepository<UseCaseStepDto>, InMemoryUseCaseStepRepository>();

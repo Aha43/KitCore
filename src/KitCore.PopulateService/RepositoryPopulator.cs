@@ -1,10 +1,10 @@
 using KitCore.Domain.Dto;
-using KitCore.Domain.Repository;
+using KitCore.Domain.Service;
 
 namespace KitCore.PopulateService;
 
 public sealed class RepositoryPopulator<T>(
-    IRepository<T> repository, Func<KitCoreDataDto, IEnumerable<T>> FetchFunc) : IRepositoryPopulator
+    IRepositoryService<T> repository, Func<KitCoreDataDto, IEnumerable<T>> FetchFunc) : IRepositoryPopulator where T : class   
 {
     public async Task PopulateAsync(KitCoreDataDto kitCoreDto)
     {

@@ -1,15 +1,20 @@
 using KitCore.Domain.Dto;
-using KitCore.Domain.Repository;
 using KitCore.Domain.Service;
 
 namespace KitCore.PopulateService;
 
 public class PopulateService(
-    IRepository<UnitSetDto> unitsRepository,
-    IRepository<BrandSetDto> brandRepository) : IPopulateService
+    IRepositoryService<SystemDto> systemRepository,
+    IRepositoryService<PartDto> partRepository,
+    IRepositoryService<SystemPartDto> systemPartRepository,
+    IRepositoryService<UnitSetDto> unitsRepository,
+    IRepositoryService<BrandSetDto> brandRepository) : IPopulateService
 {
     private readonly List<IRepositoryPopulator> _repositoryPopulators =
     [
+        new RepositoryPopulator<SystemDto>(systemRepository, e => e.Systems),
+        new RepositoryPopulator<PartDto>(partRepository, e => e.Parts),
+        new RepositoryPopulator<SystemPartDto>(systemPartRepository, e => e.SystemParts),
         new RepositoryPopulator<UnitSetDto>(unitsRepository, e => e.Units),
         new RepositoryPopulator<BrandSetDto>(brandRepository, e => e.Brands)
     ];

@@ -1,5 +1,3 @@
-using System;
-
 namespace KitCore.Domain.Dto;
 
 // Project: KitCore.Domain
@@ -14,8 +12,18 @@ public class SystemDto
     public string SystemTypeName { get; set; } = null!;  // FK to SystemTypeSet
     public string Brand { get; set; } = null!;  // FK to BrandSet
     public string Model { get; set; } = null!;  // FK to ModelSet
-    public bool IsConfiguration { get; set; }
-    public string Notes { get; set; } = null!;
+    public bool IsConfiguration { get; set; } = false;
+    public string? Notes { get; set; }
+}
+
+public class SystemPartDto
+{
+    public string Id { get; set; } = null!;  // Unique identifier (GUID)
+    public string SystemId { get; set; } = null!;  // FK to System
+    public string PartId { get; set; } = null!;  // FK to Part
+    public string? UserId { get; set; }  // Optional for future multi-user support
+    public bool IsPrimary { get; set; } = true;
+    public string? Notes { get; set; }  // Optional notes for specific usage
 }
 
 public class PartDto

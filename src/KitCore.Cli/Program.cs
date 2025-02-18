@@ -3,14 +3,15 @@ using KitCore.InMemory.Repository;
 using Microsoft.Extensions.DependencyInjection;
 using KitCore.PopulateService;
 using KitCore.Domain.Repository;
-using KitCore.Domain.Service;
 using KitCore.JsonService;
 using KitCore.Utility;
 using KitCore.Domain.Dto;
+using KitCore.RepositoryService;
 
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddKitCoreInMemoryRepositories();
 serviceCollection.AddPopulationServices();
+serviceCollection.AddRepositoryServices();
 serviceCollection.AddKitCoreJsonServices();
 var serviceProvider = serviceCollection.BuildServiceProvider();
 
@@ -38,6 +39,11 @@ try
         case "list-brands":
             await ImportJsonDataAsync(serviceProvider, args);
             await ListAsync<BrandSetDto>(serviceProvider);
+            break;
+
+        case "list-systems":
+            await ImportJsonDataAsync(serviceProvider, args);
+            await ListAsync<SystemDto>(serviceProvider);
             break;
 
         default:
