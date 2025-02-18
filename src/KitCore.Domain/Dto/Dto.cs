@@ -18,7 +18,7 @@ public class SystemDto
     public string Notes { get; set; } = null!;
 }
 
-public class SystemPartDto
+public class PartDto
 {
     public string Id { get; set; } = null!;  // Unique identifier (GUID)
     public string Code { get; set; } = null!;  // Human-friendly code for labeling and referencing

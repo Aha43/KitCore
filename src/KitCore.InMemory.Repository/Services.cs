@@ -9,7 +9,7 @@ public static class Services
     public static IServiceCollection AddKitCoreInMemoryRepositories(this IServiceCollection services)
     {
         services.AddSingleton<IRepository<SystemDto>, InMemorySystemRepository>();
-        services.AddSingleton<IRepository<SystemPartDto>, InMemorySystemPartRepository>();
+        services.AddSingleton<IRepository<PartDto>, InMemoryPartRepository>();
         services.AddSingleton<IRepository<PurchaseDto>, InMemoryPurchaseRepository>();
         services.AddSingleton<IRepository<UseCaseDto>, InMemoryUseCaseRepository>();
         services.AddSingleton<IRepository<UseCaseStepDto>, InMemoryUseCaseStepRepository>();
@@ -27,8 +27,6 @@ public static class Services
         services.AddSingleton<IRepository<ModelSetDto>, InMemoryModelSetRepository>();
         services.AddSingleton<IRepository<DataTypeSetDto>, InMemoryDataTypeSetRepository>();
         services.AddSingleton<IRepository<UnitSetDto>, InMemoryUnitSetRepository>();
-
-        services.AddSingleton<IUnitSetRepository, InMemoryUnitSetRepository>();
         return services;
     }
 }
