@@ -1,13 +1,11 @@
 using System.Text.Json;
 using KitCore.Domain.Dto;
-using KitCore.Domain.Repository;
+using KitCore.Domain.Service;
 using KitCore.Domain.Service.Json;
 
 namespace KitCore.JsonService;
-public class JsonImportService(IUnitSetRepository unitSetRepository) : IJsonImportService
+public class JsonImportService(IPopulateService populateService) : IJsonImportService
 {
-    private readonly IUnitSetRepository _unitSetRepository = unitSetRepository;
-
     public async Task ImportFromDirectoryAsync(string directoryPath)
     {
         var jsonFiles = Directory.GetFiles(directoryPath, "*.json")
@@ -24,14 +22,8 @@ public class JsonImportService(IUnitSetRepository unitSetRepository) : IJsonImpo
     private async Task ImportFileAsync(string filePath)
     {
         var jsonText = await File.ReadAllTextAsync(filePath);
-        var data = JsonSerializer.Deserialize<KitCoreDataDto>(jsonText);
-
-        if (data?.Units != null)
-        {
-            foreach (var unit in data.Units)
-            {
-                await _unitSetRepository.CreateAsync(unit);
-            }
-        }
+        var data = JsonSerializer.Deserialize<KitCoreDataDto>(jsonText) ?? throw new InvalidOperationException($"Failed to deserialize JSON from file: {filePath}");
+        await populateService.PopulateAsync(data);
     }
+
 }

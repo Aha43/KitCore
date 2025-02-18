@@ -1,21 +1,61 @@
 {
     "Brands" : [
         {
-            "BrandName" : "Apple",
-            
+            "Name" : "Lunt"
         },
         {
-            "BrandName" : "Samsung",
-            "Products" : [
-                {
-                    "ProductName" : "Galaxy",
-                    "Price" : 599
-                },
-                {
-                    "ProductName" : "Galaxy Tab",
-                    "Price" : 399
-                }
-            ]
+            "Name" : "Meade"
+        },
+        {
+            "Name" : "Orion"
+        },
+        {
+            "Name" : "Sky-Watcher"
+        },
+        {
+            "Name" : "Celestron"
+        },
+        {
+            "Name" : "Vixen"
+        },
+        {
+            "Name" : "Takahashi"
+        },
+        {
+            "Name" : "Astro-Tech"
+        },
+        {
+            "Name" : "Explore Scientific"
+        },
+        {
+            "Name" : "William Optics"
+        },
+        {
+            "Name" : "Stellarvue"
+        },
+        {
+            "Name" : "Tele Vue"
+        },
+        {
+            "Name" : "Baader Planetarium"
+        },
+        {
+            "Name" : "Antares"
+        },
+        {
+            "Name" : "iOptron"
+        },
+        {
+            "Name" : "Zhumell"
+        },
+        {
+            "Name" : "Bresser"
+        },
+        {
+            "Name" : "Astro-Physics"
+        },
+        {
+            "Name" : "TPO"
         }
     ]
 }

@@ -146,7 +146,7 @@ public class DataTypeSetDto
     public string DataType { get; set; } = null!;  // Primary Key
 }
 
-public class UnitSetDto
+public record UnitSetDto
 {
     public string Name { get; set; } = null!;  // Primary Key
     public string Symbol { get; set; } = null!;

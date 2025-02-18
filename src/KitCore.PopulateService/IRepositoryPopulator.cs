@@ -1,8 +1,8 @@
 using KitCore.Domain.Dto;
 
-namespace KitCore.Domain.Service;
+namespace KitCore.PopulateService;
 
-public interface IPopulateService
+public interface IRepositoryPopulator
 {
     Task PopulateAsync(KitCoreDataDto kitCoreDto);
 }
