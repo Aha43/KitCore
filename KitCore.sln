@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitCore.JsonService", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitCore.PopulateService", "src\KitCore.PopulateService\KitCore.PopulateService.csproj", "{F667E6DC-8F11-4A9D-A7B4-83046D914343}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitCore.Utility", "src\KitCore.Utility\KitCore.Utility.csproj", "{D5F80D4D-4CAB-40C8-9B53-489391BB4E19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{F667E6DC-8F11-4A9D-A7B4-83046D914343}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F667E6DC-8F11-4A9D-A7B4-83046D914343}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F667E6DC-8F11-4A9D-A7B4-83046D914343}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F80D4D-4CAB-40C8-9B53-489391BB4E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F80D4D-4CAB-40C8-9B53-489391BB4E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F80D4D-4CAB-40C8-9B53-489391BB4E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F80D4D-4CAB-40C8-9B53-489391BB4E19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,5 +57,6 @@ Global
 		{D58DA35D-747B-47CF-8401-159EA10EAF8F} = {0F54FF48-0D06-4B6F-97F6-AB9ED4E68E94}
 		{4DB3AD41-4A56-4DF8-BCAD-ACFEA5FCD07D} = {0F54FF48-0D06-4B6F-97F6-AB9ED4E68E94}
 		{F667E6DC-8F11-4A9D-A7B4-83046D914343} = {0F54FF48-0D06-4B6F-97F6-AB9ED4E68E94}
+		{D5F80D4D-4CAB-40C8-9B53-489391BB4E19} = {0F54FF48-0D06-4B6F-97F6-AB9ED4E68E94}
 	EndGlobalSection
 EndGlobal

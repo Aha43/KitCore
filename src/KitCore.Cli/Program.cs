@@ -5,6 +5,8 @@ using KitCore.PopulateService;
 using KitCore.Domain.Repository;
 using KitCore.Domain.Service;
 using KitCore.JsonService;
+using KitCore.Utility;
+using KitCore.Domain.Dto;
 
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddKitCoreInMemoryRepositories();
@@ -30,12 +32,12 @@ try
 
         case "list-units":
             await ImportJsonDataAsync(serviceProvider, args);
-            await ListUnitsAsync(serviceProvider);
+            await ListAsync<UnitSetDto>(serviceProvider);
             break;
 
         case "list-brands":
             await ImportJsonDataAsync(serviceProvider, args);
-            await ListBrandsAsync(serviceProvider);
+            await ListAsync<BrandSetDto>(serviceProvider);
             break;
 
         default:
@@ -48,25 +50,13 @@ catch (Exception ex)
     Console.WriteLine($"Error: {ex}");
 }
 
-static async Task ListUnitsAsync(IServiceProvider serviceProvider)
+static async Task ListAsync<T>(IServiceProvider serviceProvider) where T : class
 {
-    var unitSetRepo = serviceProvider.GetRequiredService<IUnitSetRepository>();
-    var units = await unitSetRepo.GetAllAsync();
-    Console.WriteLine("Defined Units:");
-    foreach (var unit in units)
+    var repository = serviceProvider.GetRequiredService<IRepository<T>>();
+    var items = await repository.GetAllAsync();
+    foreach (var item in items)
     {
-        Console.WriteLine($"- {unit}");
-    }
-}
-
-static async Task ListBrandsAsync(IServiceProvider serviceProvider)
-{
-    var brandSetRepo = serviceProvider.GetRequiredService<IBrandSetRepository>();
-    var brands = await brandSetRepo.GetAllAsync();
-    Console.WriteLine("Defined Brands:");
-    foreach (var unit in brands)
-    {
-        Console.WriteLine($"- {unit.Name}");
+        Console.WriteLine(item.ToUserFriendlyString());
     }
 }
 
@@ -81,7 +71,4 @@ static async Task ImportJsonDataAsync(IServiceProvider serviceProvider, string[]
     var directoryPath = args[1];
     var jsonImportService = serviceProvider.GetRequiredService<IJsonImportService>();
     await jsonImportService.ImportFromDirectoryAsync(directoryPath);
-
-    var populateService = serviceProvider.GetRequiredService<IPopulateService>();
-    
 }

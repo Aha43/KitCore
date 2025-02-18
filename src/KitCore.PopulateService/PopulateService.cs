@@ -5,8 +5,8 @@ using KitCore.Domain.Service;
 namespace KitCore.PopulateService;
 
 public class PopulateService(
-    IUnitSetRepository unitsRepository,
-    IBrandSetRepository brandRepository) : IPopulateService
+    IRepository<UnitSetDto> unitsRepository,
+    IRepository<BrandSetDto> brandRepository) : IPopulateService
 {
     private readonly List<IRepositoryPopulator> _repositoryPopulators =
     [

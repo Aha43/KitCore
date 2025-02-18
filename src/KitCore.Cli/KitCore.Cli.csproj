@@ -11,6 +11,7 @@
     <ProjectReference Include="../KitCore.InMemory.Repository/KitCore.InMemory.Repository.csproj" />
     <ProjectReference Include="../KitCore.JsonService/KitCore.JsonService.csproj" />
     <ProjectReference Include="../KitCore.PopulateService/KitCore.PopulateService.csproj" />
+    <ProjectReference Include="../KitCore.Utility/KitCore.Utility.csproj" />
   </ItemGroup>
 
 </Project>
