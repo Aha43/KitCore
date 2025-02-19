@@ -146,7 +146,7 @@ public class CurrencySetDto
 
 public class ModelSetDto
 {
-    public string Model { get; set; } = null!;  // Primary Key
+    public string Name { get; set; } = null!;  // Primary Key
 }
 
 public class DataTypeSetDto

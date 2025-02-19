@@ -6,9 +6,12 @@
     ],
     "Systems": [
         {
-            "Id": "Scope2",
-            "Code": "SN: 123456",
-            "Brand": "Lunt"
+            "Id": "Scope2-Solar",
+            "Name": "Lunt LS60MT",
+            "Code": "SN:0000977",
+            "Brand": "Lunt",
+            "SystemTypeName": "Telescope",
+            "Model": "LS60MT"
         }
     ]
 }

@@ -142,7 +142,7 @@ public class InMemoryCurrencySetRepository : InMemoryRepository<CurrencySetDto>
 
 public class InMemoryModelSetRepository : InMemoryRepository<ModelSetDto>
 {
-    protected override string GetEntityId(ModelSetDto entity) => entity.Model;
+    protected override string GetEntityId(ModelSetDto entity) => entity.Name;
 }
 
 public class InMemoryDataTypeSetRepository : InMemoryRepository<DataTypeSetDto>

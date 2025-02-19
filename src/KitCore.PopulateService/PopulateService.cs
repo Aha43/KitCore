@@ -8,6 +8,7 @@ public class PopulateService(
     IRepositoryService<PartDto> partRepository,
     IRepositoryService<SystemPartDto> systemPartRepository,
     IRepositoryService<UnitSetDto> unitsRepository,
+    IRepositoryService<ModelSetDto> modelsRepository,
     IRepositoryService<BrandSetDto> brandRepository) : IPopulateService
 {
     private readonly List<IRepositoryPopulator> _repositoryPopulators =
@@ -16,6 +17,7 @@ public class PopulateService(
         new RepositoryPopulator<PartDto>(partRepository, e => e.Parts),
         new RepositoryPopulator<SystemPartDto>(systemPartRepository, e => e.SystemParts),
         new RepositoryPopulator<UnitSetDto>(unitsRepository, e => e.Units),
+        new RepositoryPopulator<ModelSetDto>(modelsRepository, e => e.Models),
         new RepositoryPopulator<BrandSetDto>(brandRepository, e => e.Brands)
     ];
 
