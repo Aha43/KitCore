@@ -7,6 +7,8 @@ using KitCore.JsonService;
 using KitCore.Utility;
 using KitCore.Domain.Dto;
 using KitCore.RepositoryService;
+using KitCore.Domain.Implementation;
+using KitCore.Domain.Utility;
 
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddKitCoreInMemoryRepositories();
@@ -59,11 +61,7 @@ catch (Exception ex)
 static async Task ListAsync<T>(IServiceProvider serviceProvider) where T : class
 {
     var repository = serviceProvider.GetRequiredService<IRepository<T>>();
-    var items = await repository.GetAllAsync();
-    foreach (var item in items)
-    {
-        Console.WriteLine(item.ToUserFriendlyString());
-    }
+    await RepositoryUtil.ListToConsoleAsync(repository);
 }
 
 static async Task ImportJsonDataAsync(IServiceProvider serviceProvider, string[] args)

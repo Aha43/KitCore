@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../KitCore.Domain/KitCore.Domain.csproj" />
-    <ProjectReference Include="../KitCore.Utility/KitCore.Utility.csproj" />
   </ItemGroup>
 
 </Project>
