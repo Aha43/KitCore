@@ -2,6 +2,7 @@
 
 using KitCore.Domain.Dto;
 using KitCore.Domain.Repository;
+using KitCore.Utility;
 
 namespace KitCore.InMemory.Repository;
 

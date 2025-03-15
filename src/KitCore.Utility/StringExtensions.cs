@@ -5,7 +5,7 @@ namespace KitCore.Utility;
 
 public static class StringExtensions
 {
-    public static string ToUserFriendlyString<T>(this T record) where T : notnull
+    public static string ToUserFriendlyString<T>(this T record, bool writeType = false) where T : notnull
     {
         if (record is null) return string.Empty;
 
@@ -13,7 +13,7 @@ public static class StringExtensions
         var type = record.GetType();
         var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-        sb.AppendLine($"{type.Name}:");
+        if (writeType) sb.AppendLine($"{type.Name}:");
 
         foreach (var prop in properties)
         {
@@ -23,4 +23,22 @@ public static class StringExtensions
 
         return sb.ToString().TrimEnd();
     }
+
+    public static string ToDisplayList<T>(this IEnumerable<T> records) where T : notnull
+    {
+        var sb = new StringBuilder();
+        bool first = true;
+        foreach (var record in records)
+        {
+            if (record is null) continue;
+            if (!first) 
+            {
+                sb.AppendLine();
+            }
+            sb.AppendLine(record.ToUserFriendlyString());
+            first = false;
+        }
+        return sb.ToString().TrimEnd();
+    }
+
 }

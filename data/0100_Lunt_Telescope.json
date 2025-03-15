@@ -1,9 +1,4 @@
 {
-    "Models": [
-        {
-            "Name": "LS60MT"
-        }
-    ],
     "Systems": [
         {
             "Id": "Scope2-Solar",

@@ -4,10 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using KitCore.PopulateService;
 using KitCore.Domain.Repository;
 using KitCore.JsonService;
-using KitCore.Utility;
 using KitCore.Domain.Dto;
 using KitCore.RepositoryService;
-using KitCore.Domain.Implementation;
 using KitCore.Domain.Utility;
 
 var serviceCollection = new ServiceCollection();
@@ -61,7 +59,7 @@ catch (Exception ex)
 static async Task ListAsync<T>(IServiceProvider serviceProvider) where T : class
 {
     var repository = serviceProvider.GetRequiredService<IRepository<T>>();
-    await RepositoryUtil.ListToConsoleAsync(repository);
+    await RepositoryUtil.DisplayListToConsoleAsync(repository);
 }
 
 static async Task ImportJsonDataAsync(IServiceProvider serviceProvider, string[] args)
