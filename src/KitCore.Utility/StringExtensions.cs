@@ -5,7 +5,7 @@ namespace KitCore.Utility;
 
 public static class StringExtensions
 {
-    public static string ToUserFriendlyString<T>(this T record, bool writeType = false) where T : notnull
+    public static string ToUserFriendlyString<T>(this T? record, bool writeType = false) where T : notnull
     {
         if (record is null) return string.Empty;
 

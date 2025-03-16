@@ -7,4 +7,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- <ItemGroup>
+    <PackageReference Include="SpfFramework" Version="1.0.0" />
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <ProjectReference Include="../../../spf/src/SimplePromptFramework/SimplePromptFramework.csproj" />
+    <ProjectReference Include="../KitCore.InMemory.Repository/KitCore.InMemory.Repository.csproj" />
+    <ProjectReference Include="../KitCore.JsonService/KitCore.JsonService.csproj" />
+    <ProjectReference Include="../KitCore.PopulateService/KitCore.PopulateService.csproj" />
+    <ProjectReference Include="../KitCore.RepositoryService/KitCore.RepositoryService.csproj" />
+    <ProjectReference Include="../KitCore.Utility/KitCore.Utility.csproj" />
+  </ItemGroup>
+
 </Project>
