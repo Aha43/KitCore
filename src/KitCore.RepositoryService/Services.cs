@@ -12,6 +12,7 @@ public static class Services
         services.AddSingleton<IRepositoryService<SystemDto>, SystemRepositoryService>();
         services.AddSingleton<IRepositoryService<PartDto>, RepositoryService<PartDto>>();
         services.AddSingleton<IRepositoryService<SystemPartDto>, RepositoryService<SystemPartDto>>();
+        services.AddSingleton<IRepositoryService<SystemPartTypeDto>, RepositoryService<SystemPartTypeDto>>();
         services.AddSingleton<IRepositoryService<UnitSetDto>, RepositoryService<UnitSetDto>>();
         services.AddSingleton<IRepositoryService<ModelSetDto>, RepositoryService<ModelSetDto>>();
         services.AddSingleton<IRepositoryService<BrandSetDto>, RepositoryService<BrandSetDto>>();

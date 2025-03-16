@@ -7,4 +7,5 @@ public class Brand(IRepository<BrandSetDto> repository) : KitCoreListPromptHandl
 public class System(IRepository<SystemDto> repository) : KitCoreListPromptHandler<SystemDto>(repository) { }
 public class Model(IRepository<ModelSetDto> repository) : KitCoreListPromptHandler<ModelSetDto>(repository) { }
 public class Unit(IRepository<UnitSetDto> repository) : KitCoreListPromptHandler<UnitSetDto>(repository) { }
+public class SystemPartType(IRepository<SystemPartTypeDto> repository) : KitCoreListPromptHandler<SystemPartTypeDto>(repository) { }
 

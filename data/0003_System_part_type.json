@@ -1,0 +1,8 @@
+{
+    "SystemPartTypes": [
+        {
+            "Name": "MirrorStarDiagonal",
+            "Description": "Angled mirror or prism accessory that redirects light for more comfortable telescope viewing"
+        }
+    ]
+}

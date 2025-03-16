@@ -28,7 +28,7 @@ public class SystemPartDto
 
 public class PartDto
 {
-    public string Id { get; set; } = null!;  // Unique identifier (GUID)
+    public string Id { get; set; } = null!; 
     public string Code { get; set; } = null!;  // Human-friendly code for labeling and referencing
     public string? UserId { get; set; }  // Optional for future multi-user support
     public string Name { get; set; } = null!;
