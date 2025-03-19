@@ -62,7 +62,7 @@ public class InMemorySystemRepository : InMemoryRepository<SystemDto>
 
 public class InMemoryPartRepository : InMemoryRepository<PartDto>
 {
-    protected override string GetEntityId(PartDto entity) => entity.Id;
+    protected override string GetEntityId(PartDto entity) => entity.Name;
 }
 
 public class InMemorySystemPartRepository : InMemoryRepository<SystemPartDto>

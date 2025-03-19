@@ -1,8 +1,5 @@
 namespace KitCore.Domain.Dto;
 
-// Project: KitCore.Domain
-
-
 public class SystemDto
 {
     public string Id { get; set; } = null!;  // Unique identifier (GUID)
@@ -28,14 +25,12 @@ public class SystemPartDto
 
 public class PartDto
 {
-    public string Id { get; set; } = null!; 
-    public string Code { get; set; } = null!;  // Human-friendly code for labeling and referencing
+    public string Name { get; set; } = null!;  // Primary Key 
     public string? UserId { get; set; }  // Optional for future multi-user support
-    public string Name { get; set; } = null!;
-    public string SystemPartTypeName { get; set; } = null!;  // FK to SystemPartTypeSet
+    public string SystemPartTypeName { get; set; } = null!;  // FK to SystemPartType
     public string Brand { get; set; } = null!;  // FK to BrandSet
     public string Model { get; set; } = null!;  // FK to ModelSet
-    public string Notes { get; set; } = null!;
+    public string? Notes { get; set; }
 }
 
 public class PurchaseDto
@@ -115,6 +110,7 @@ public class SystemTypeDto
 public class SystemPartTypeDto
 {
     public string Name { get; set; } = null!;  // Primary Key
+    public string Category { get; set; } = null!;
     public string Description { get; set; } = null!;
 }
 

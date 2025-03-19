@@ -2,6 +2,9 @@
     "Models": [
         {
             "Name": "LS60MT"
+        },
+        {
+            "Name": "2inch-90deg-Dura-Bright-Dielectric-Diagonal"
         }
     ]
 }

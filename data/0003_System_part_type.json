@@ -2,7 +2,33 @@
     "SystemPartTypes": [
         {
             "Name": "MirrorStarDiagonal",
+            "Category": "LightPathModifier",
             "Description": "Angled mirror or prism accessory that redirects light for more comfortable telescope viewing"
+        },
+        {
+            "Name": "BlockingFilterDiagonal",
+            "Category": "LightPathModifier",
+            "Description": "Diagonal with a built-in filter that blocks most of the Sun's light, allowing safe solar viewing"
+        },
+        {
+            "Name": "HAlphaEtalon",
+            "Category": "NarrowbandFilter",
+            "Description": "Narrowband filter that isolates the red light of hydrogen-alpha (H-alpha) for solar viewing"
+        },
+        {
+            "Name": "AltAzMount",
+            "Category": "TelescopeMount",
+            "Description": "A two-axis telescope mount that moves in altitude (up/down) and azimuth (left/right) for simple, intuitive tracking"
+        },
+        {
+            "Name": "EquatorialMount",
+            "Category": "TelescopeMount",
+            "Description": "A two-axis telescope mount that moves in right ascension (RA) and declination (Dec) for precise tracking of celestial objects"
+        },
+        {
+            "Name": "AstroCamera",
+            "Category": "ImagingDevice",
+            "Description": "A specialized digital camera optimized for astronomical imaging, designed for deep-sky, planetary, or solar photography"
         }
     ]
 }

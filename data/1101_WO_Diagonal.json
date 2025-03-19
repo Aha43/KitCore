@@ -1,0 +1,10 @@
+{
+    "Parts": [
+        {
+            "Name": "WO Diagonal",
+            "Brand": "William Optics",
+            "Model": "2inch-90deg-Dura-Bright-Dielectric-Diagonal",
+            "SystemPartTypeName": "MirrorStarDiagonal"
+        }
+    ]
+}
